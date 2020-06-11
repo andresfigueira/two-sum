@@ -20,9 +20,16 @@ final class TwoSumTests: XCTestCase {
         XCTAssertEqual(TwoSum().solution(numbers, target), [])
     }
 
+    func testEmptyNumbers() {
+        let numbers = [Int]()
+        let target = 10
+        XCTAssertEqual(TwoSum().solution(numbers, target), [])
+    }
+
     static var allTests = [
         ("testOneSolution", testOneSolution),
         ("testOneSolution", testOneSolution),
         ("testNoSolutions", testNoSolutions),
+        ("testEmptyNumbers", testEmptyNumbers),
     ]
 }
